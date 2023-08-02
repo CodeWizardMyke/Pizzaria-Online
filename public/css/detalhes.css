@@ -1,0 +1,28 @@
+
+body{
+    display: flex;
+    width: 95vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.destaque{
+    background-color: rgba(247, 247, 247,.8);
+    width: 400px;
+    height: 700px;
+}
+.destaque img{
+    width: 100%;
+    height: 100%;
+}
+.destaque span{
+    font-weight: 900;
+    font-size: 16pt;
+    margin-top: 50px;
+    display: block;
+}
+.destaque p {
+    padding: 5px;
+    margin-left: 15px;
+}

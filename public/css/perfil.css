@@ -1,0 +1,36 @@
+html{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+main.ct-profile{
+    width: 95vw;
+    height: 100vh;
+    display: flex;
+}
+.wd-box{
+    background-color: rgba(255, 255, 255, 0.8);
+    display: block;
+    width: 600px;
+    height: 70vh;
+    margin: 0 auto;
+}
+.pf-user{
+    background-color: rgba(221, 221, 221, 0.5);
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fx-itens{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.font{
+    font-size: 18pt;
+}
+.font div{
+    margin-top: 10px;
+    padding: 5px;
+}

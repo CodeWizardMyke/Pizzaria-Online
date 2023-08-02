@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Fantástica></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <link rel="stylesheet" href="/css/index.css">
+    <form action="/pizzas/busca" method="get" id="form-busca">
+        <input type="text" name="q" placeholder="Qual pizza você procura?" autocomplete="off" value="">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart/">Carrinho</a></li>
+
+                <% if(admin == 'false') {%>
+                    <li>
+                        <a href="/user/">Login</a>
+                    </li>
+                <% } %> 
+
+                <% if(admin == 'true') {%>
+                    <li><a href="/user/perfil">Perfil</a></li>
+                <% } %>  
+
+            </ul>
+            <div class="cart"> 
+                    <label for="menuCart">Carrinho: </label>
+                    <div class="menuCart" name="">
+                        <a href="/carrinho"><%= quantidade %> </a>
+                    </div>
+            </div>
+        </nav>
+        
+    </header>
+    <main>
+        
+        <% let p = pizza %>
+        <article>
+            <img src="<%= p.img %>" alt="<%= p.nome%>">
+            <a href="/pizzas/<%= p.id %>">Ver Mais</a>
+            
+            <form action="/pizzas/addCart" method="post">
+                <input type="hidden" name="aEscolhida" value="<%= p.id %>">
+                <button type="submit">+Add</button>
+            </form>
+
+            <div><%= p.nome %></div>
+            <span>R$ <%= p.preco %></span>
+        </article>
+        
+    </main>
+</body>
+
+</html>

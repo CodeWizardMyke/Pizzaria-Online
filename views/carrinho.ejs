@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Fantástica></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <link rel="stylesheet" href="/css/index.css">
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart/">Carrinho</a></li>
+
+                <% if(admin == 'false') {%>
+                    <li>
+                        <a href="/user/">Login</a>
+                    </li>
+                <% } %> 
+
+                <% if(admin == 'true') {%>
+                    <li><a href="/user/perfil">Perfil</a></li>
+                <% } %>  
+
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        
+        <% for( let p of pizzasCarrinho) {%>
+            <article>
+                <img src="<%= p.img %> " alt="<%= p.name %> ">
+                <a href="/pizzas/<%= p.id %> ">Ver Mais</a>
+                <div><%= p.nome%> </div>
+                <span><%= p.preco %> </span>
+            </article>
+        <% } %> 
+        
+    </main>
+</body>
+
+</html>

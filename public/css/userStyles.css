@@ -1,0 +1,36 @@
+.btn a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: orangered;
+}
+.btn a:hover{
+    background-color: rgba(255, 68, 0,.6);
+}
+.button button{
+    background-color: orangered;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+main{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.cp_form{
+    height: 600px;
+    width: 600px;
+    background-color: rgba(240, 248, 255,.6);
+}
+.dp-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.inpt-size input{
+    width: 200px;
+    height: 27px;
+    display: block;
+}

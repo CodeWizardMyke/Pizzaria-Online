@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Fantástica></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/userStyles.css">
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li class="btn"><a href="/">Home</a></li>
+        </ul>
+    </div>
+    <main>
+        <section class="cp_form dp-flex inpt-size">
+            <div class="">
+                <form action="/user/cadastro" method="post"> 
+                  
+                    <div>
+                        <label for="user_name">primeiro nome: </label>
+                        <input type="text" name="user_name" id="">
+                    </div>
+                    <div>
+                        <label for="user_sobrenome">Sobrenome: </label>
+                        <input type="text" name="user_sobrenome" id="">
+                    </div>
+                    <div>
+                        <label for="user_email">Email válido</label>
+                        <input type="email" name="user_email" id="">
+                        <label for="re_user_email">Confirme o email</label>
+                        <input type="email" name="re_user_email" id="">
+                    </div>
+                    <div>
+                        <label for="cep">Cep:
+                            <input type="number" name="cep" id="">
+                        </label>
+                        <label for="rua">complemento:
+                            <input type="text" name="complemento" id="">
+                        </label>
+                        <label for="tel">Telefone: 
+                            <input type="tel" name="tel" id="">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="user_password">Senha:</label>
+                        <input type="password" name="user_password" id="">
+                        <label for="re_user_password">Confirme sua Senha:</label>
+                        <input type="password" name="re_user_password" id="">
+                    </div>
+                    <div class="button">
+                       <button type="submit">Cadastrar-se</button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <form action="/user/login" method="post">
+                    <div>
+                        <label for="user_email">usuario:</label>
+                        <input type="email" name="user_email" id="">
+                    </div>
+                    <div>
+                        <label for="user_password">Senha:</label>
+                        <input type="password" name="user_password" id="">
+                    </div>
+                    <div class="button">
+                        <button type="submit">Logar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

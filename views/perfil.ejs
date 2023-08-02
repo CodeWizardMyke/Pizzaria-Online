@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Fantástica></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/perfil.css">
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart/">Carrinho</a></li>
+            </ul>
+            <a href="/user/logoff/">Deslogar</a>
+        </nav>   
+    </header>
+    <main class="ct-profile">
+
+        <section class="wd-box">
+            <div class="pf-user">
+                <h1><%= usuario.nome %> <%= usuario.sobrenome %></h1>
+                <img src="" alt="avatar">
+            </div>
+            <div class="fx-itens font">
+                <div>
+                    <span>Email:
+                        <%= usuario.email %> 
+                    </span>
+                </div>
+                <div>
+                    <span>complemento:
+                        <%= usuario.complemento %> 
+                    </span>
+                </div>
+                <div>
+                    <span>Cep:
+                        <%= usuario.cep %> 
+                    </span>
+                </div>
+                <div>
+                    <span>Tell:
+                        <%= usuario.tel %> 
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
